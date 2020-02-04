@@ -1,6 +1,7 @@
-require "skiing/version"
+require_relative "skiing/version"
+require_relative "./skiing/cli"
 
-module Skiing
-  class Error < StandardError; end
-  # Your code goes here...
-end
+# module Skiing
+#   class Error < StandardError; end
+#   # Your code goes here...
+# end
