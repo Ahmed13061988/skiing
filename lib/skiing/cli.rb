@@ -6,23 +6,24 @@ class Skiing::CLI
   end
   
   def list_ski
-    puts "This is a list of the skies areas in Colorado:"
-    puts "
-      Arapahoe Basin
-      Aspen Highlands (Aspen)
-      Aspen Mountain (Aspen) 
-      Beaver Creek
-      Breckenridge
-      Buttermilk (Aspen)
-      Chapman Hill Ski Area
-      Copper Mountain
-      Cranor Ski Area
-      Crested Butte "
+    # puts "This is a list of the skies areas in Colorado:"
+    # puts "
+    #   Arapahoe Basin
+    #   Aspen Highlands (Aspen)
+    #   Aspen Mountain (Aspen) 
+    #   Beaver Creek
+    #   Breckenridge
+    #   Buttermilk (Aspen)
+    #   Chapman Hill Ski Area
+    #   Copper Mountain
+    #   Cranor Ski Area
+    #   Crested Butte "
+      @skiies = Skiing::Ski.areas
   end 
    def menu 
      input = nil 
      while input != "exit"
-     puts "Please selcet the ski area you intrest in."
+     puts "Please select the ski area you want info about it."
      input = gets.strip.downcase 
      case input 
      when"1"
