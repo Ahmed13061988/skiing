@@ -11,4 +11,4 @@ require "skiing"
 # Pry.start
 
 require "irb"
-IRB.start(__FILE__)
+ IRB.start#(__FILE__)

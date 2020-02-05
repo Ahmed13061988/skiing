@@ -1,7 +1,7 @@
-#!usr/bin/env ruby 
+#!/usr/bin/env ruby 
 # require "bundler/setup"
 # require "skiing"
 
-require '../lib/skiing'
+require_relative '../lib/skiing'
 
 Skiing::CLI.new.call 

@@ -1,8 +1,7 @@
+
 class Skiing::CLI 
   def call 
     menu 
-    list_ski
-    farewell 
   end
   
   def list_ski
@@ -14,16 +13,16 @@ class Skiing::CLI
     #   Beaver Creek
     #   Breckenridge
     #   Buttermilk (Aspen)
-    #   Chapman Hill Ski Area
+    # puts   "Chapman Hill Ski Area"
     #   Copper Mountain
     #   Cranor Ski Area
     #   Crested Butte "
-      @skiies = Skiing::Ski.areas
+       @skiies = Skiing::Ski.areas
   end 
    def menu 
      input = nil 
      while input != "exit"
-     puts "Please select the ski area you want info about it."
+     puts "Welcome to skiing , if you want to see the list print list "
      input = gets.strip.downcase 
      case input 
      when"1"
