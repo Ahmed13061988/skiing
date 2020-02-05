@@ -31,6 +31,8 @@ class Skiing::CLI
      puts "more info about ..."
      when "list"
        list_ski 
+     else 
+       puts "Invalid input !"
      end 
    end
    end 
