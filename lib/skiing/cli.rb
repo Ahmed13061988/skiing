@@ -6,7 +6,7 @@ class Skiing::CLI
     end
     
     def list_ski
-        @skiies = Skiing::Ski.areas
+        @skiies = Ski.areas
     end 
       
     def menu 

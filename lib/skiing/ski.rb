@@ -1,4 +1,4 @@
-class Skiing::Ski 
+class Ski 
   
   attr_accessor :name , :url 
   
@@ -24,8 +24,13 @@ class Skiing::Ski
    ski_area7 = self.new 
    ski_area7.name = "Copper Mountain"
    ski_area7.url = "https://en.wikipedia.org/wiki/Copper_Mountain_(Colorado)"
-   
-   [ski_area1, ski_area2, ski_area3, ski_area4, ski_area5, ski_area6, ski_area7]
+     puts "\n 1) #{ski_area1.name}\n #{ski_area1.url}\n
+ 2) #{ski_area2.name}\n #{ski_area2.url}\n
+ 3) #{ski_area3.name}\n #{ski_area3.url}\n
+ 4) #{ski_area4.name}\n #{ski_area4.url}\n
+ 5) #{ski_area5.name}\n #{ski_area5.url}\n
+ 6) #{ski_area6.name}\n #{ski_area6.url}\n
+ 7) #{ski_area7.name}\n #{ski_area7.url}\n"
     
 end 
 

@@ -1,7 +1,7 @@
 require_relative "skiing/version"
 require_relative "./skiing/cli"
 require_relative "./skiing/ski"
-require 'pry'
+# require 'pry'
 
 # module Skiing
 #   class Error < StandardError; end
