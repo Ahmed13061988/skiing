@@ -7,33 +7,34 @@ class Skiing::CLI
     
     def list_ski
         @skiies = Ski.areas
+        @skiies.each.with_index(1) do |ski, index|
+          puts "#{index}. #{ski}-#{ski.url}"
+        end 
     end 
-      
-    def menu 
-      puts "Welcome to skiing areas info,if you want to see the list print list or type exit to exit the program"
-     input = nil 
-     while input != "exit" 
-     input = gets.strip.downcase 
-     puts "Please choose the ski area you want to get more info about!"
-     case input 
-     when"1"
-     puts "more info about ..."
-     when "2"
-     puts "more info about ..."
-     when "list"
-      list_ski 
-      
-      
-      puts "\n Please choose the ski area you want to get more info about:\n\n"
-      
-     when "exit"
-         farewell
-     else
-       puts "Invalid input !"
-     end 
-    end
-   end 
+    def choosing 
+      the_ski = @skiies[input.to_i-1]
+         puts "#{index} #{ski}-#{ski.url}"
+    end 
     def farewell 
      puts "Have a great time in Colorado !!"
     end 
+      
+      
+    def menu 
+      puts "Welcome to skiing areas info,if you want to see the list print list or type exit to exit the program"
+       input = nil 
+       input = gets.strip.downcase 
+      if input == "list"
+        puts "\n Please choose the ski area you want to get more info about:\n\n"
+        list_ski
+      elsif input == "exit"
+        farewell
+       if input.to_i > 0 
+         choosing
+      else 
+        puts "please choose from 1 to 7 to see the ski areas"
+      end 
+    end 
+  end 
+    
 end 
