@@ -10,10 +10,11 @@ class Skiing::CLI
     end 
       
     def menu 
+      puts "Welcome to skiing areas info,if you want to see the list print list or type exit to exit the program"
      input = nil 
-     while input != "exit"
-     puts "Welcome to skiing areas info,if you want to see the list print list or type exit to exit the program"
+     while input != "exit" 
      input = gets.strip.downcase 
+     puts "Please choose the ski area you want to get more info about!"
      case input 
      when"1"
      puts "more info about ..."
@@ -21,6 +22,10 @@ class Skiing::CLI
      puts "more info about ..."
      when "list"
       list_ski 
+      
+      
+      puts "\n Please choose the ski area you want to get more info about:\n\n"
+      
      when "exit"
          farewell
      else
