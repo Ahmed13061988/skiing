@@ -11,17 +11,14 @@ class Skiing::CLI
           puts "#{index}. #{ski.name}-#{ski.url}"
         end 
     end 
-    def choosing 
-      the_ski = @skiies[input.to_i-1]
-         puts "#{index} #{ski}-#{ski.url}"
-    end 
+
     def farewell 
      puts "Have a great time in Colorado !!"
     end 
       
       
     def menu 
-      puts "Welcome to skiing areas info,if you want to see the list print list or type exit to exit the program"
+      puts "Welcome to skiing areas info,if you want to see the list print list or type exit to exit the program !!"
       input = nil 
       while input != "exit"
         
@@ -32,7 +29,8 @@ class Skiing::CLI
        elsif input == "exit"
         farewell
        elsif input.to_i > 0 && input.to_i < Ski.areas.length+1
-         puts Ski.areas[input.to_i-1].name + Ski.areas[input.to_i-1].url
+           puts Ski.areas[input.to_i-1].name + Ski.areas[input.to_i-1].url
+        
       else 
         puts "please choose from 1 to 7 to see the ski areas"
       end 
