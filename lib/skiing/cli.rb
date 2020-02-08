@@ -31,8 +31,8 @@ class Skiing::CLI
         list_ski
        elsif input == "exit"
         farewell
-       elsif input.to_i > 0 && input.to_i < Ski.areas.length 
-         puts Ski.areas[input.to_i].name + Ski.areas[input.to_i].url
+       elsif input.to_i > 0 && input.to_i < Ski.areas.length+1
+         puts Ski.areas[input.to_i-1].name + Ski.areas[input.to_i-1].url
       else 
         puts "please choose from 1 to 7 to see the ski areas"
       end 
