@@ -13,7 +13,7 @@ class Skiing::CLI
     end 
 
     def farewell 
-     puts "Have a great time in Colorado !!"
+     puts "I hope you liked my CLI application \nHave a great time in Colorado !!"
     end 
       
       
@@ -32,7 +32,7 @@ class Skiing::CLI
            puts Ski.areas[input.to_i-1].name + Ski.areas[input.to_i-1].url
         
       else 
-        puts "please choose from 1 to 7 to see the ski areas"
+        puts "That's invalid input! please choose from 1 to 7 to see the ski areas"
       end 
     end 
   end 
