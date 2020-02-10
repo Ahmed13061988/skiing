@@ -1,28 +1,32 @@
 class Ski 
   
-  attr_accessor :name, :url, :times
+  attr_accessor :name, :info 
   
   def self.areas
    self.scrape_ski
   end
   
   def self.scrape_ski
-    ski = []
+    skiies = []
     
-    ski << self.scrape_resort
-    ski 
+    skiies << self.scrape_resort2
+    skiies << self.scrape_resort1
+    skiies 
     
   end 
   def self.scrape_resort1
     doc = Nokogiri::HTML(open("https://www.skiresort.info/ski-resorts/colorado/"))
-    name = doc.search('h2.list').text
-    times =doc.search("table.info-table").text
-    binding.pry
+    ski = self.new
+    ski.name = doc.search('h2.list').text
+    ski.info = doc.search("table.info-table").text
+    ski
   end 
   def self.scrape_resort2
     doc = Nokogiri::HTML(open("https://www.skiresort.info/ski-resort/telluride/"))
-    name= 
-    times= 
-  
+    ski=self.new  
+    ski.name = doc.search("div.subnavi-header").text
+    ski.info = doc.search("div.description").text
+    ski
+  end 
 end 
 

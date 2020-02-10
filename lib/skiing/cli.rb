@@ -8,7 +8,7 @@ class Skiing::CLI
     def list_ski
         @skiies = Ski.areas
         @skiies.each.with_index(1) do |ski, index|
-          puts "#{index}. #{ski.name}-#{ski.url}"
+          puts "#{index}. #{ski.name}-#{ski.info}"
         end 
     end 
 
@@ -29,7 +29,7 @@ class Skiing::CLI
        elsif input == "exit"
         farewell
        elsif input.to_i > 0 && input.to_i < Ski.areas.length+1
-           puts Ski.areas[input.to_i-1].name + Ski.areas[input.to_i-1].url
+           puts Ski.areas[input.to_i-1].name + Ski.areas[input.to_i-1].info
         
       else 
         puts "That's invalid input! please choose from 1 to 7 to see the ski areas"
