@@ -1,6 +1,12 @@
 
 class Skiing::CLI 
-    
+  attr_accessor :name, :info 
+  
+  def initialize 
+    @name = name 
+    @info =info 
+  end 
+
     def call
       menu 
     end
@@ -8,10 +14,10 @@ class Skiing::CLI
     def list_ski
         @skiies = Ski.areas
         @skiies.each.with_index(1) do |ski, index|
-          puts "#{index}. #{ski}-#{ski}"
+          puts "#{index}. #{ski.name}"
         end 
     end 
-
+    
     def farewell 
      puts "I hope you liked my CLI application \nHave a great time in Colorado !!"
     end 
