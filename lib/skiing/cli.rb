@@ -8,7 +8,7 @@ class Skiing::CLI
     def list_ski
         @skiies = Ski.areas
         @skiies.each.with_index(1) do |ski, index|
-          puts "#{index}. #{ski.name}-#{ski.info}"
+          puts "#{index}. #{ski}-#{ski}"
         end 
     end 
 
@@ -18,7 +18,7 @@ class Skiing::CLI
       
       
     def menu 
-      puts "Welcome to skiing areas info,if you want to see the list print list or type exit to exit the program !!"
+      puts "Welcome to skiing areas info.\nIf you want to see the list print list or type exit to exit the program !!"
       input = nil 
       while input != "exit"
         
@@ -29,7 +29,7 @@ class Skiing::CLI
        elsif input == "exit"
         farewell
        elsif input.to_i > 0 && input.to_i < Ski.areas.length+1
-           puts Ski.areas[input.to_i-1].name + Ski.areas[input.to_i-1].info
+           puts Ski.areas[input.to_i-1] #+ Ski.areas[input.to_i-1]
         
       else 
         puts "That's invalid input! please choose from 1 to 7 to see the ski areas"
