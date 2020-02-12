@@ -21,16 +21,15 @@ class Ski
     ski=self.new 
     name = doc.css("h2")
     the_name = name.map{|n| n.text.strip}
-    # info = doc.css("ul")
-    # the_info =info.map{|i| i.text.strip}
-    # binding.pry
   end 
-  def self.scrape_resort_info
+  def self.scrape_info
     doc = Nokogiri::HTML(open("https://www.uncovercolorado.com/ski-resorts-in-colorado/"))
-    ski = self.new
-    info = doc.css("ul")
-    the_info =info.map{|i| i.text.strip}
-  end 
+    ski_info = self.new
+    info=doc.css("ul")
+    a = info.map{|c| c.text.strip}
     
+    
+  end 
+   
  
 end 

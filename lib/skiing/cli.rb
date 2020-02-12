@@ -35,7 +35,8 @@ class Skiing::CLI
        elsif input == "exit"
         farewell
        elsif input.to_i > 0 && input.to_i < Ski.scrape_resort.length+1
-           puts Ski.scrape_resort[input.to_i-1] + Ski.scrape_resort[input.to_i-1]
+           puts Ski.scrape_resort[input.to_i-1]  
+           puts Ski.scrape_info[input.to_i-1]
         
       else 
         puts "That's invalid input! please choose from 1 to 7 to see the ski areas"
