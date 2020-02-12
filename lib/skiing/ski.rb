@@ -2,10 +2,15 @@ class Ski
   
   attr_accessor :name, :info 
   @@all = []
- 
-  def save 
-    @@all << self
-  end 
+   
+   def initialize
+     @name = name 
+     @info = info 
+     @@all << self 
+   end 
+  # def save 
+  #   @@all << self
+  # end 
   
   def self.all 
     @@all 

@@ -30,8 +30,8 @@ class Skiing::CLI
         
        input = gets.strip.downcase 
        if input == "list"
-        puts "\n Please choose the ski area you want to get more info about:\n\n"
         list_ski
+          puts "\n Please choose the ski area you want to get more info about:\n\n"
        elsif input == "exit"
         farewell
        elsif input.to_i > 0 && input.to_i < Ski.scrape_resort.length+1
