@@ -1,22 +1,23 @@
 
 class Skiing::CLI 
+  
+   def greeting 
+      puts "Please type your name :)"
+      name = gets.strip.capitalize
+      puts "Hello #{name}, and welcome to skiing areas info.\nIf you want to see the list print list or type exit to exit the program !!"
+    end 
  
     def menu 
-      input= nil 
-      puts "Please type your name :)"
-      input = gets.strip.capitalize
-      puts "Hello #{input}, and welcome to skiing areas info.\nIf you want to see the list print list or type exit to exit the program !!"
-      input = nil 
-      while input != "exit"
-        
+      greeting
+       Ski.scrape_data
        input = gets.strip.downcase 
        if input == "list"
         list_ski
-          puts "\n Please choose the ski area you want to get more info about:\n\n"
+
        elsif input == "exit"
         farewell
-       elsif input.to_i > 0 && input.to_i < Ski.scrape_resort.length+1
-           puts Ski.scrape_resort[input.to_i-1] 
+       elsif input.to_i > 0 && input.to_i < Ski.scrape_data.length+1
+           puts Ski.scrape_data[input.to_i-1] 
            
            puts "************"
            
@@ -33,10 +34,10 @@ class Skiing::CLI
   end 
     
     def list_ski
-        @skiies = Ski.scrape_resort
-        @skiies.each.with_index(1) do |ski, index|
-          puts "#{index}. #{ski}"
+        Ski.all.each.with_index(1) do |ski, index|
+          puts "#{index}. #{ski.name}"
         end 
+       puts "\n Please choose the ski area you want to get more info about:\n\n"
     end 
     
     def farewell 
