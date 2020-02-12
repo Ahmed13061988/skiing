@@ -1,8 +1,7 @@
 
 class Skiing::CLI 
-  attr_accessor :name, :info 
-     
-   def menu 
+ 
+    def menu 
       input= nil 
       puts "Please type your name :)"
       input = gets.strip.capitalize
