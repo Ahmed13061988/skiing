@@ -12,9 +12,9 @@ class Skiing::CLI
     end
     
     def list_ski
-        @skiies = Ski.areas
+        @skiies = Ski.scrape_resort
         @skiies.each.with_index(1) do |ski, index|
-          puts "#{index}. #{ski.name}"
+          puts "#{index}. #{ski}"
         end 
     end 
     
