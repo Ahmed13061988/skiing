@@ -1,29 +1,8 @@
 
 class Skiing::CLI 
   attr_accessor :name, :info 
-  
-  def initialize 
-    @name = name 
-    @info =info 
-  end 
-
-    def call
-      menu 
-    end
-    
-    def list_ski
-        @skiies = Ski.scrape_resort
-        @skiies.each.with_index(1) do |ski, index|
-          puts "#{index}. #{ski}"
-        end 
-    end 
-    
-    def farewell 
-     puts "I hope you liked my CLI application \nHave a great time in Colorado !!"
-    end 
-      
-      
-    def menu 
+     
+   def menu 
       input= nil 
       puts "Please type your name :)"
       input = gets.strip.capitalize
@@ -53,5 +32,17 @@ class Skiing::CLI
       end 
     end 
   end 
+    
+    def list_ski
+        @skiies = Ski.scrape_resort
+        @skiies.each.with_index(1) do |ski, index|
+          puts "#{index}. #{ski}"
+        end 
+    end 
+    
+    def farewell 
+     puts "I hope you liked my CLI application \nHave a great time in Colorado !!"
+    end 
+      
     
 end 
