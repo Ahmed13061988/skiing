@@ -24,7 +24,10 @@ class Skiing::CLI
       
       
     def menu 
-      puts "Welcome to skiing areas info.\nIf you want to see the list print list or type exit to exit the program !!"
+      input= nil 
+      puts "Please type your name :)"
+      input = gets.strip.upcase
+      puts "Hello #{input}, and welcome to skiing areas info.\nIf you want to see the list print list or type exit to exit the program !!"
       input = nil 
       while input != "exit"
         
