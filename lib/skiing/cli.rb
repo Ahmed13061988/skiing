@@ -5,10 +5,10 @@ class Skiing::CLI
       puts "Please type your name :)"
       name = gets.strip.capitalize
       puts "Hello #{name}, and welcome to skiing areas info.\nIf you want to see the list print list or type exit to exit the program !!"
+      menu
     end 
  
     def menu 
-      greeting
        Ski.scrape_data
        input = gets.strip.downcase 
        if input == "list"
@@ -16,8 +16,7 @@ class Skiing::CLI
 
        elsif input == "exit"
         farewell
-        
-        
+      
       else 
         puts "That's invalid input! please choose from 1 to 7 to see the ski areas"
       end 
@@ -36,12 +35,21 @@ class Skiing::CLI
       input = gets.to_i-1 
       if input.between?(0,Ski.all.length)
       info = Ski.find_area(input)
-      binding.pry 
+     puts  info.stats
+   else 
+     puts "That's not a valid selection!"
+     list_info
     end 
+    puts "Do you want to see another ski area , type 'y' if yes or 'n' to exit ;) ?!"
+    input = nil 
+    input = gets.strip.downcase
+    if input == "y"
+      puts list_ski
+    elsif input == "n"
+        farewell
+     end 
   end 
         
-      
-    
     def farewell 
      puts "I hope you liked my CLI application \nHave a great time in Colorado !!"
     end 
