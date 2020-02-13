@@ -47,6 +47,10 @@ class Skiing::CLI
             puts list_ski
           elsif input == "n"
             farewell
+            exit 
+          else 
+            puts "I'm not sure what you asking!"
+            puts list_ski
           end 
     end 
         
