@@ -34,21 +34,21 @@ class Skiing::CLI
     def list_info 
       input = gets.to_i-1 
       if input.between?(0,Ski.all.length)
-      info = Ski.find_area(input)
-     puts  info.stats
-   else 
-     puts "That's not a valid selection!"
-     list_info
+        info = Ski.find_area(input)
+          puts  info.stats
+      else 
+         puts "That's not a valid selection!"
+        list_info
+      end 
+        puts "Do you want to see another ski area , type 'y' if yes or 'n' to exit ;) ?!"
+        input = nil 
+        input = gets.strip.downcase
+          if input == "y"
+            puts list_ski
+          elsif input == "n"
+            farewell
+          end 
     end 
-    puts "Do you want to see another ski area , type 'y' if yes or 'n' to exit ;) ?!"
-    input = nil 
-    input = gets.strip.downcase
-    if input == "y"
-      puts list_ski
-    elsif input == "n"
-        farewell
-     end 
-  end 
         
     def farewell 
      puts "I hope you liked my CLI application \nHave a great time in Colorado !!"
