@@ -16,29 +16,31 @@ class Skiing::CLI
 
        elsif input == "exit"
         farewell
-       elsif input.to_i > 0 && input.to_i < Ski.scrape_data.length+1
-           puts Ski.scrape_data[input.to_i-1] 
-           
-           puts "************"
-           
-           puts Ski.scrape_details[input.to_i-1]
-           
-           puts"*************************************"
-           
-           puts Ski.scrape_info[input.to_i-1]
+        
         
       else 
         puts "That's invalid input! please choose from 1 to 7 to see the ski areas"
       end 
-    end 
+   
   end 
     
     def list_ski
         Ski.all.each.with_index(1) do |ski, index|
           puts "#{index}. #{ski.name}"
         end 
-       puts "\n Please choose the ski area you want to get more info about:\n\n"
+       puts "\n Please enter the number of the ski area you want to get more info about:\n\n"
+       list_info
     end 
+    
+    def list_info 
+      input = gets.to_i-1 
+      if input.between?(0,Ski.all.length)
+      info = Ski.find_area(input)
+      binding.pry 
+    end 
+  end 
+        
+      
     
     def farewell 
      puts "I hope you liked my CLI application \nHave a great time in Colorado !!"

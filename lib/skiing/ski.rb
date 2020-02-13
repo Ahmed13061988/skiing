@@ -28,6 +28,12 @@ class Ski
       end
     end
     
+    def self.find_area(input)
+      self.all[input]
+    end 
+    
+      
+    
 end 
 
 
