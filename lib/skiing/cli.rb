@@ -18,7 +18,8 @@ class Skiing::CLI
         farewell
       
       else 
-        puts "That's invalid input! please choose from 1 to 7 to see the ski areas"
+        puts "That's invalid input! please type list for list or exit to exit!"
+        menu
       end 
    
   end 
