@@ -49,9 +49,15 @@ class Skiing::CLI
             farewell
             exit 
           else 
-            puts "I'm not sure what you asking!"
-            puts list_ski
+            puts "I'm not sure what you asking! Type exit to exit or again to show list"
+            input = gets.strip
+            if input == "exit"
+              farewell
+              exit
+              else input == "again"
+              list_ski
           end 
+        end 
     end 
         
     def farewell 
