@@ -47,7 +47,7 @@ class Skiing::CLI
          puts "That's not a valid selection!"
         list_info
       end 
-        puts "Do you want to see another ski area ?\nType 'y' if yes or 'n' to exit ;)"
+        puts "\nDo you want to see another ski area ?\nType 'y' if yes or 'n' to exit ;)"
         input = nil 
         input = gets.strip.downcase
           if input == "y"
