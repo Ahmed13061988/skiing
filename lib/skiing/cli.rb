@@ -2,6 +2,7 @@
 class Skiing::CLI 
   
    def greeting 
+      Ski.scrape_data
       puts "Please type your name :)"
       name = gets.strip.capitalize
       puts "Hello #{name}, and welcome to skiing areas info.\nIf you want to see the list print list or type exit to exit the program !!"
@@ -9,7 +10,6 @@ class Skiing::CLI
     end 
  
     def menu 
-       Ski.scrape_data
        input = gets.strip.downcase 
        if input == "list"
         list_ski
@@ -19,15 +19,8 @@ class Skiing::CLI
       
       else 
         puts "That's invalid input! please type list for list or exit to exit!"
-        input = gets.strip.downcase
-        if input == "list"
-          list_ski
-        elsif input == "exit"
-          farewell
-        else 
           menu
       end 
-   end 
   end 
     
     def list_ski
