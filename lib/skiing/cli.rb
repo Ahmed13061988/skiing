@@ -32,7 +32,7 @@ class Skiing::CLI
     end 
     
     def list_info 
-      input = gets.to_i-1 
+      input = gets.to_i
       if input.between?(0,Ski.all.length)
         info = Ski.find_area(input)
           puts  "The area you choose is ---->

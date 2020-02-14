@@ -29,7 +29,7 @@ class Ski
     end
     
     def self.find_area(input)
-      self.all[input]
+      self.all[input-1]
     end
 end 
 
