@@ -24,6 +24,8 @@ class Skiing::CLI
           list_ski
         elsif input == "exit"
           farewell
+        else 
+          menu
       end 
    end 
   end 
