@@ -57,7 +57,7 @@ class Skiing::CLI
             exit 
           else 
             puts "I'm not sure what you asking! Type exit to exit or again to show list"
-            input = gets.strip
+            input = gets.strip.downcase
             if input == "exit"
               farewell
               exit
