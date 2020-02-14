@@ -19,9 +19,13 @@ class Skiing::CLI
       
       else 
         puts "That's invalid input! please type list for list or exit to exit!"
-        menu
+        input = gets.strip.downcase
+        if input == "list"
+          list_ski
+        elsif input == "exit"
+          farewell
       end 
-   
+   end 
   end 
     
     def list_ski
