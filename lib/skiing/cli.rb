@@ -44,7 +44,7 @@ class Skiing::CLI
         info = Ski.find_area(input)
           puts  "The area you choose is ---->
           ( #{info.name} )\n#{info.stats}"
-      else 
+      elsif input.between?(0,Ski.all.length) == false 
          puts "That's not a valid selection!Pleaase try again :)"
         list_info
       end 
