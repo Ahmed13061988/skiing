@@ -22,8 +22,9 @@ Or install it yourself as:
     $ gem install skiing
 
 ## Usage
-
-TODO: Write usage instructions here
+The application will ask the user for name 
+The application will ask user if he want to show the list or exit The application will show the list and ask the user to input a number of ski resort that he want to know about 
+The application will give the user an option to see another ski area or exit the application.
 
 ## Development
 
